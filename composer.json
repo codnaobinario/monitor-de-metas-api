@@ -1,5 +1,5 @@
 {
-    "name": "pmsp-smdu",
+    "name": "pmsp/smdu",
     "description": "Ferramenta de importaçãdos dados e api para acesso",
     "keywords": ["api", "import", "tool", "open", "government"],
     "license": "MIT",
@@ -17,7 +17,7 @@
     "repositories": [{
         "type": "package",
         "package": {
-            "name": "PHPOffice/PHPExcel",
+            "name": "phpoffice/phpexcel",
             "version": "1.7.8",
             "source": {
                 "url": "https://github.com/PHPOffice/PHPExcel.git",
