@@ -4,11 +4,11 @@
     "keywords": ["api", "import", "tool", "open", "government"],
     "license": "MIT",
     "require": {
-        "laravel/framework": "4.1.*",
+        "laravel/framework": "4.1.*",        
         "guilhermeguitte/behat-laravel": "dev-master",
         "behat/behat": "2.5.x-dev",
         "phpoffice/phpexcel": "dev-master",
-        "way/generators": "dev-master",
+        "way/generators": "3",
         "way/laravel-test-helpers": "dev-master",
         "jmikola/geojson": "~1.0"
     },
@@ -26,7 +26,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "PHPExcel": "Classes/"
+                    "phpexcel": "Classes/"
                 }
             }
         }
