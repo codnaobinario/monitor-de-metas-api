@@ -20,9 +20,9 @@
             "name": "phpoffice/phpexcel",
             "version": "1.7.8",
             "source": {
-                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "url": "https://github.com/phpoffice/phpexcel.git",
                 "type": "git",
-                "reference": "PHPExcel_1.7.8"
+                "reference": "phpexcel_1.7.8"
             },
             "autoload": {
                 "psr-0": {
@@ -39,7 +39,6 @@
             "app/database/migrations",
             "app/database/seeds",
             "app/tests/TestCase.php",
-
             "app/src",
             "app/src/Importer"
         ]
