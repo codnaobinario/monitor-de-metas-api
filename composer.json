@@ -4,17 +4,15 @@
     "keywords": ["api", "import", "tool", "open", "government"],
     "license": "MIT",
     "require": {
-        "laravel/framework": "4.1.*",        
+        "laravel/framework": "4.1.31",        
         "guilhermeguitte/behat-laravel": "dev-master",
-        "behat/behat": "2.5.x-dev",
-        "phpoffice/phpexcel": "dev-master",
-        "way/generators": "3",
+        "behat/behat": "2.5.x-dev",        
+        "way/generators": "1.1",
         "way/laravel-test-helpers": "dev-master",
         "jmikola/geojson": "~1.0"
     },
     "require-dev": {
-    },
-    "repositories": [{
+    },"repositories": [{
         "type": "package",
         "package": {
             "name": "phpoffice/phpexcel",
