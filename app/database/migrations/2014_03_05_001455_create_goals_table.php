@@ -30,7 +30,7 @@ class CreateGoalsTable extends Migration {
             $table->text('schedule_2015_2016');
             $table->text('observation');
             $table->text('technically');
-            $table->text('status');
+            $table->integer('status');
             $table->text('transversalidade')->nullable();
             $table->text('qualitative_progress_1')->nullable();
             $table->text('qualitative_progress_2')->nullable();
