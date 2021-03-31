@@ -26,4 +26,8 @@ COPY ./entrypoint/entrypoint.sh .
 
 EXPOSE 80
 
-ENTRYPOINT ["bash", "entrypoint.sh"]
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.8.0/wait /wait
+RUN chmod +x /wait
+
+## Launch the wait tool and then your application
+CMD /wait && bash entrypoint.sh
