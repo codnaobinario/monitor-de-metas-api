@@ -14,9 +14,8 @@ sed -i  -e "s/'username'\s*=>\s*'wp'/'username' => '${DBUSER}'/g" app/config/dat
 sed -i  -e "s/'password'\s*=>\s*'wp'/'password' => '${DBPASS}'/g" app/config/database.php
 sed -i  -e "s/'prefix'\s*=>\s*''/'prefix' => '${DBPREFIX}'/g" app/config/database.php
 
-sh -c "waitingfor && php artisan migrate --env=production"
-
-sh -c "waitingfor && php artisan db:seed"
+./wait-for-it.sh -t 0 db:3306 -- php artisan migrate --env=production
+./wait-for-it.sh -t 0 db:3306 -- php artisan db:seed
 
 chmod -R 777 /monitor-de-metas-api/app/storage
 /etc/init.d/php5.6-fpm start

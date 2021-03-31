@@ -24,6 +24,7 @@ RUN composer self-update --snapshot
 RUN composer install -vvv --ansi --profile
 
 COPY ./entrypoint/entrypoint.sh .
+COPY ./entrypoint/wait-for-it.sh .
 
 EXPOSE 80
 
