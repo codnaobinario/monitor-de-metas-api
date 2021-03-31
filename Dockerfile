@@ -7,8 +7,7 @@ ENV DBNAME='pdm_api'
 ENV DBUSER='wp'
 ENV DBPASS='wp'
 ENV DBPREFIX=''
-ENV WAIT_HOSTS='db:3306'
-ENV WAIT_AFTER_HOSTS=15
+ENV WAIT_HOSTS=''
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
