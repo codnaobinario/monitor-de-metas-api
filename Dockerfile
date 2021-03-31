@@ -7,7 +7,6 @@ ENV DBNAME='pdm_api'
 ENV DBUSER='wp'
 ENV DBPASS='wp'
 ENV DBPREFIX=''
-ENV WAIT_HOSTS=''
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
@@ -24,7 +23,6 @@ RUN composer self-update --snapshot
 RUN composer install -vvv --ansi --profile
 
 COPY ./entrypoint/entrypoint.sh .
-COPY ./entrypoint/wait-for-it.sh .
 
 EXPOSE 80
 
