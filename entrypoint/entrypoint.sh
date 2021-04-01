@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git pull
 chown -R www-data: /monitor-de-metas-api/
 
 sed -i -e "s/root %%NGINX_ROOT%%;/root \/monitor-de-metas-api\/public;/g" /etc/nginx/sites-available/default.conf
@@ -10,10 +11,10 @@ sed -i  -e "s/'username'\s*=>\s*'wp'/'username' => '${DBUSER}'/g" app/config/dat
 sed -i  -e "s/'password'\s*=>\s*'wp'/'password' => '${DBPASS}'/g" app/config/database.php
 sed -i  -e "s/'prefix'\s*=>\s*''/'prefix' => '${DBPREFIX}'/g" app/config/database.php
 
-php artisan migrate --env=production
+php artisan migrate
 php artisan db:seed
 
 chmod -R 777 /monitor-de-metas-api/app/storage
 /etc/init.d/php5.6-fpm start
 
-nginx
+nginx   
