@@ -1,32 +1,30 @@
 {
-    "name": "pmsp-smdu",
+    "name": "pmsp/smdu",
     "description": "Ferramenta de importaçãdos dados e api para acesso",
     "keywords": ["api", "import", "tool", "open", "government"],
     "license": "MIT",
     "require": {
-        "laravel/framework": "4.1.*",
+        "laravel/framework": "4.1.31",        
         "guilhermeguitte/behat-laravel": "dev-master",
-        "behat/behat": "2.5.x-dev",
-        "PHPOffice/PHPExcel": "dev-master",
-        "way/generators": "dev-master",
+        "behat/behat": "2.5.x-dev",        
+        "way/generators": "1.1",
         "way/laravel-test-helpers": "dev-master",
         "jmikola/geojson": "~1.0"
     },
     "require-dev": {
-    },
-    "repositories": [{
+    },"repositories": [{
         "type": "package",
         "package": {
-            "name": "PHPOffice/PHPExcel",
+            "name": "phpoffice/phpexcel",
             "version": "1.7.8",
             "source": {
-                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "url": "https://github.com/phpoffice/phpexcel.git",
                 "type": "git",
-                "reference": "PHPExcel_1.7.8"
+                "reference": "phpexcel_1.7.8"
             },
             "autoload": {
                 "psr-0": {
-                    "PHPExcel": "Classes/"
+                    "phpexcel": "Classes/"
                 }
             }
         }
@@ -39,7 +37,6 @@
             "app/database/migrations",
             "app/database/seeds",
             "app/tests/TestCase.php",
-
             "app/src",
             "app/src/Importer"
         ]

@@ -58,9 +58,10 @@ class CsvSeeder extends Seeder
                     if (count($row)>(count($header)/2)) {
                         $row = array_pad($row, count($header), 0);
                     }
-                    //var_dump($row);
-                    $data[] = array_combine($header, $row);
-
+                    var_dump($row);
+                    if ($row[0]!=null) {
+                        $data[] = array_combine($header, $row);
+                    }
                 }
             }
             fclose($handle);

@@ -60,3 +60,22 @@ php artisan behat:run validation_xls_file   # validate all data based on some ru
 php artisan behat:run importer_xls_file     # import validate data to database
 ```
 
+## Usando com Dockerfile
+
+Você obrigatóriamente tem que ter um servidor mysql/mariadb externos, utilizando as seguintes VARIAVEIS DE AMBIENTE no docker na hora de subir.
+
+```
+DBDRIVE='mysql'
+DBHOST='127.0.0.1'
+DBPORT='3306'
+DBNAME='pdm_api'
+DBUSER='wp'
+DBPASS='wp'
+DBPREFIX=''
+```
+
+ou seja, para executar apontando para o seu banco de dados, basta apenas executar:
+
+```
+docker run --name monitor-de-metas -e DBHOST=mysql.dyndns.org -e DBUSER=root -e DBPASS=pass -e URL=meusystema.dominio.com.br embeddednetworks/monitor-de-metas-api
+```
