@@ -14,7 +14,7 @@ RUN apt-get update && \
 
 RUN curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer --version=1.10.20
 
-RUN git clone https://github.com/mbnunes/monitor-de-metas-api.git
+RUN git clone https://github.com/nucleo-digital/monitor-de-metas-api.git
 
 WORKDIR "/monitor-de-metas-api"
 
