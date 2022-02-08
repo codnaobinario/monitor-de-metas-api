@@ -77,5 +77,5 @@ DBPREFIX=''
 ou seja, para executar apontando para o seu banco de dados, basta apenas executar:
 
 ```
-docker run --name monitor-de-metas -e DBHOST=mysql.dyndns.org -e DBUSER=root -e DBPASS=pass -e URL=meusystema.dominio.com.br embeddednetworks/monitor-de-metas-api
+docker run --name monitor-de-metas -e DBHOST=mysql.dyndns.org -e DBUSER=root -e DBPASS=pass -e URL=meusystema.dominio.com.br ucleodigitalorg/monitor-de-metas-api
 ```
