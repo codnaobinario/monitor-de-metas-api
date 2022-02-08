@@ -18,6 +18,8 @@ RUN git clone https://github.com/nucleo-digital/monitor-de-metas-api.git
 
 WORKDIR "/monitor-de-metas-api"
 
+RUN git checkout test-xls
+
 RUN composer clear-cache
 RUN composer self-update --snapshot
 RUN composer install -vvv --ansi --profile
